@@ -2,8 +2,7 @@ const express = require("express")
 const app = express()
 const bodyparser = require("body-parser")
 const cors = require("cors")
-
-var port = process.env.PORT || 8080
+const { con } = require("./source/mysql")
 
 // importação da funções da papeline, dos manipuladores de rota
 const { psicologo } = require("./psicologo/cadastrodados")
@@ -29,6 +28,8 @@ const { consultasAgends } = require("./paciente/consultasAgends")
 app.use(bodyparser.urlencoded({ extended: true }))
 app.use(bodyparser.json())
 app.use(cors())
+
+var port = process.env.PORT || 8080
 
 
 // // manipuladores de rota verbos http
