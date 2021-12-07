@@ -67,6 +67,6 @@ app.post("/consultasAgends", consultasAgends)
 app.post("/searchPsicologo", searchPsicologo)
 
 
-app.listen(80, () => {
+app.listen(3000, () => {
     console.log("execute>>>>")
 })
