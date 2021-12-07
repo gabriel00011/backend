@@ -3,6 +3,7 @@ const app = express()
 const bodyparser = require("body-parser")
 const cors = require("cors")
 
+var port = process.env.PORT || 8080
 
 // importação da funções da papeline, dos manipuladores de rota
 const { psicologo } = require("./psicologo/cadastrodados")
@@ -67,6 +68,6 @@ app.post("/consultasAgends", consultasAgends)
 app.post("/searchPsicologo", searchPsicologo)
 
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("execute>>>>")
 })
